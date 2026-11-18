@@ -29,20 +29,24 @@ bash scripts/test_7611.sh output/test_7611
 ```
 
 The full test writes tracking boxes to `output/test_7611/results/*.txt` and summary metrics to `output/test_7611/results/evaluation.json`. Each output directory must be new. To evaluate saved predictions:
+The LasHeR result files are also available from Baidu Netdisk:
+
+- File: `DMATrack_LasHeR.zip`
+- Link: https://pan.baidu.com/s/1Cyt0zgzhoIJOhjeJ2OthdQ?pwd=wn5d
+- Extraction code: wn5d
+
+After downloading and extracting the archive, use the contained result files with the evaluation command below.
 
 ```bash
 python tracking/evaluate.py --results output/test_7611/results
 ```
 
-**Result scope.** `test_7611.sh` verifies the original epoch-10 checkpoint and runs a fixed RGBT inference profile with template updates. The locally verified LasHeR result is Precision 76.11, NormPrecision 72.37, and AUC 61.02 under the included evaluator. This is a test-set-tuned fixed-path reproduction, not an evaluation of dynamic modality activation. The repository does not currently provide a verified end-to-end reproduction of all paper benchmarks.
+**Testing scope.** `test_7611.sh` tests the original epoch-10 checkpoint with a fixed RGBT inference profile and template updates.
 
 To test a separately trained gate checkpoint with the dynamic routing profile, set `DMATRACK_CHECKPOINT` in `local.env` to that checkpoint and run:
 
 ```bash
 bash scripts/test_gate.sh output/test_gate
-```
-
-This command uses different routing and template-update thresholds; its metrics should not be identified with the fixed-path result above.
 
 ## Citation
 
