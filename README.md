@@ -47,6 +47,7 @@ To test a separately trained gate checkpoint with the dynamic routing profile, s
 
 ```bash
 bash scripts/test_gate.sh output/test_gate
+```
 
 ## Citation
 
