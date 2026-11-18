@@ -62,4 +62,3 @@ bash scripts/test_gate.sh output/test_gate
 }
 ```
 
-Third-party copyright and redistribution notes are retained in `THIRD_PARTY_NOTICES.md` and `external/licenses/`. Confirm upstream redistribution permissions and choose a project license before publishing.
