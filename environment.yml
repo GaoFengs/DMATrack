@@ -1,0 +1,8 @@
+name: dmatrack
+channels:
+  - defaults
+dependencies:
+  - python=3.8.18
+  - pip=23.3
+  - pip:
+      - -r requirements.txt

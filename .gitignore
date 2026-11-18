@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.so
+*.o
+.build/
+local.env
+/data/
+/checkpoints/*
+!/checkpoints/README.md
+!/checkpoints/*.json
+/output/
+/predictions/
+*.pth
+*.pth.tar
+*.log
+.pytest_cache/
