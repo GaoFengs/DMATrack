@@ -10,7 +10,7 @@ Code for **Dynamic modality activation for RGB-T tracking with prompt-guided enh
 
 The tested environment is Linux, Python 3.8, PyTorch 1.10.1 with CUDA 11.1, and an NVIDIA GPU. The CUDA development toolkit and GCC/G++ 9 are needed to build PreciseRoIPooling.
 
-Download [LasHeR](https://github.com/BUGPLEASEOUT/LasHeR) and arrange its test split as `LasHeR/testingset/<sequence>/{visible,infrared,init.txt}`. Place the original model checkpoint at `checkpoints/DMATrack_ep0010.pth.tar`, or set `DMATRACK_CHECKPOINT` in `local.env`. The checkpoint is present in this local working copy but ignored by Git; upload it separately before publishing the repository.
+Download [LasHeR](https://github.com/BUGPLEASEOUT/LasHeR) and arrange its test split as `LasHeR/testingset/<sequence>/{visible,infrared,init.txt}`. Place the original model checkpoint at `checkpoints/DMATrack_ep0010.pth.tar`, or set `DMATRACK_CHECKPOINT` in `local.env`. 
 
 ```bash
 conda env create -f environment.yml
